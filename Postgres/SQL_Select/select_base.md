@@ -95,3 +95,24 @@ SELECT
     END AS adjusted_salary
 FROM employees;
 ```
+
+#### how to use 'count' to select a value in a table
+`To use 'select', 'where' and 'count' to select a value in a table`
+```sql
+SELECT count(name) FROM employees;
+```
+
+#### how to use 'avg' to select a value in a table
+`To use 'select', 'where' and 'avg' to select an average value in a table`
+```sql
+SELECT avg(salary) FROM employees;
+```
+
+## select and group by
+
+#### how to use 'group by' to select a value in a table
+`To use 'select', 'where' and 'group by' to select a value in a table`
+```sql
+SELECT position, avg(salary) FROM employees GROUP BY position having avg(salary) > 1000;
+```
+![alt text](image-7.png)
