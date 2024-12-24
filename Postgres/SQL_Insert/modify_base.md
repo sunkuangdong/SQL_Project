@@ -1,5 +1,10 @@
 ## Just insert base
 
+## insert a value to a table
+
+```
+INSERT INTO employees (name, salary) VALUES ('Bob', 1000);
+```
 
 ## Add
 
