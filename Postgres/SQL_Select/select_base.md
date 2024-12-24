@@ -65,3 +65,33 @@ SELECT * FROM employees WHERE name LIKE '%Bob%';
 `note: like is fuzzy matching, % is a wildcard character`
 ![alt text](image-5.png)
 
+#### how to use 'order by' to select a value in a table
+`To use 'select', 'where' and 'order by' to select a value in a table`
+```sql
+SELECT * FROM employees ORDER BY salary; // from small to big
+SELECT * FROM employees ORDER BY salary DESC; // from big to small
+```
+![alt text](image-6.png)
+
+## select and date
+
+#### how to select date
+`To select date`
+```sql
+SELECT TO_CHAR(create_date, 'YYYY-MM-DD HH24:MI:SS') AS formatted_create_date
+FROM employees;
+```
+![alt text](image-7.png)
+
+#### how to use 'case' to select a value in a table
+`To use 'select', 'where' and 'case' to select a value in a table`
+```sql
+SELECT 
+    salary,
+    CASE 
+        WHEN position = 'Developer' THEN salary + 1000
+        WHEN position = 'Designer' THEN salary + 800
+        ELSE salary
+    END AS adjusted_salary
+FROM employees;
+```
