@@ -40,3 +40,9 @@ SELECT * FROM A LEFT JOIN B ON A.id = B.id;
 ```sql
 SELECT * FROM A RIGHT JOIN B ON A.id = B.id;
 ```
+
+#### nested select 
+`To use 'select' to select a value in a table`
+```sql
+SELECT * FROM employees WHERE salary > (SELECT avg(salary) FROM employees);
+```
